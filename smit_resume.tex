@@ -1,0 +1,211 @@
+% using smitcv.cls class file
+\documentclass[10pt,a4paper,ragged2e,withhyper]{smitcv}
+
+%% smitcv uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.5cm,columnsep=1cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  %   \setmainfont{Erewhon}
+\else
+  % If using pdflatex:
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividBlue}{HTML}{226699}
+\definecolor{Black}{HTML}{000000}
+
+\colorlet{tagline}{VividBlue}
+\colorlet{heading}{Black}
+\colorlet{headingrule}{VividBlue}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividBlue}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+\name{Smit Limbani}
+\tagline{I am an IT graduate, currently pursuing M.Tech. in CS at IIIT-Bangalore.}
+% Cropped to square from smitdp.jpeg
+\photoR{3cm}{smitdp.jpeg}
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \mailaddress{smitrl77@gmail.com}
+  \phone{8866400847}
+  \location{Bangalore, Karnataka, India}
+  \linkedin{smit-limbani-878914106}
+  \github{smitlimbani}
+  \quora{Smit-Limbani}
+}
+
+\makecvheader
+
+\begin{center}
+ {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip
+% \line(2,0){500}{Black}
+\end{center}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+% \setlength{\columnseprule}{0.4pt}
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Projects}
+
+\cvproject{CI/CD pipeline \& Log moitoring}{| Docker, Jenkins, ELK}
+Implemented a continuous integration and continuous deployment pipeline on a full-fledged Spring Boot-Angular web application using open source DevOps tools.
+
+\divider
+
+\cvproject{Notice Me App.}{| Android(Java), Firebase}
+Developed an Android app that focuses on digitizing the current noticing system of any organization in a more efficient way.
+
+\divider
+
+\cvproject{Online Judge}{| LAMP stack}
+Developed an online judge for intra-college coding events using LAMP stack.
+
+\medskip
+
+\divider
+
+{\cvsectionfont{\color{emphasis}GATE-2019\par}}
+\medskip
+{\Large{\color{emphasis}Score: \textbf{\color{accent}680/1000}\par}}
+\smallskip
+{\Large{\color{emphasis}All India Rank: \textbf{\color{accent}1010}}}
+
+\divider
+
+\cvsection{Position of Responsibility}
+
+\cvevent{Member of SAC(Student Affairs Council)}{IIITB}{Aug 2019 - present}{Bangalore, Karnataka}
+\begin{itemize}
+\item Won SAC elections with highest votes.
+\item Managed many small/big events, redressed student grievances and tried my best to maintain harmony between the student body and the management.
+\end{itemize}
+
+\divider
+
+\cvevent{Design Head of CSI Student Branch}{DDU}{Aug 2016 -  Jul 2018}{Nadiad, Gujarat}
+\begin{itemize}
+\item Intorduced a new technical event which gained popularity in the institute.
+\item Designed various posters, banners, brochures and few logos.
+\end{itemize}
+
+\divider
+
+\cvevent{Vice President of Codechef campus chapter}{DDU}{Sept 2016 - Jan 2018}{Nadiad, Gujarat}
+\begin{itemize}
+\item Initiated codechef campus chapter in our institute.
+\end{itemize}
+
+\divider
+
+\cvevent{Social \& P.R. Manager of Shutterbugs)}{DDU}{Jul 2016-- Jul 2017}{Nadiad, Gujarat}
+
+\begin{itemize}
+\item Delivered a seminar on Mobile photography and editing.
+\end{itemize}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Hard skills}
+
+\cvskill{C | C++}{4}
+\smallskip
+\cvskill{Java}{3}
+\smallskip
+\cvskill{Python | PHP | JS}{2}
+\divider
+
+\cvskill{RDBMS(MySQL)}{4}
+\divider
+
+\cvskill{Web development}{3}
+\smallskip
+\cvskill{Angular}{2}
+\smallskip
+\cvskill{Android development}{3}
+\divider
+
+\cvskill{DevOps}{4}
+\divider
+
+\cvskill{Linux}{4}
+\divider
+
+\cvskill{Graphic design(vector)}{3}
+\smallskip
+
+
+\cvsection{Soft Skills}
+
+\cvskill{Adaptability}{5}
+\smallskip
+
+\cvskill{Management}{4}
+\smallskip
+
+\cvskill{Interpersonal}{4}
+\smallskip
+
+\cvsection{Education}
+
+\cvedu{M.Tech. in Computer Science}{Jul 2019 - present}{IIIT Bangalore}
+
+\divider
+
+\cvedu{B.Tech. in Information Technology}{Aug 2015 - May 2019}{DDU, Nadiad}
+
+\divider
+
+\cvedu{SSC/HSC science}{2001 - 2015}{Don Bosco}
+
+\cvsection{Other Interests}
+
+\cvtag{Hiking/Trekking}
+\cvtag{Photography}
+\par
+\cvtag{Management/Hosting}
+\cvtag{Graphic designing}
+\cvtag{Quantum physics}
+\cvtag{Social upliftment}
+
+\end{paracol}
+
+\end{document}
